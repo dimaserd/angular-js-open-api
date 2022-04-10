@@ -12,11 +12,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
@@ -30,6 +28,7 @@ import { MatTreeModule } from '@angular/material/tree';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { RouterModule } from '@angular/router';
 import { MatTableModule } from '@angular/material/table';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -43,37 +42,22 @@ import { MatTableModule } from '@angular/material/table';
     JsOpenApiExecutionLogComponent,
   ],
   imports: [
-    MatFormFieldModule,
+    CommonModule,
+    [MatFormFieldModule,
     MatTableModule,
     MatExpansionModule,
     MatFormFieldModule,
     MatSnackBarModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
     MatTabsModule,
-    MatMenuModule,
-    MatCardModule,
-    MatSelectModule,
-    MatTooltipModule,
-    MatCheckboxModule,
-    MatChipsModule,
     MatListModule,
     MatButtonModule,
-    MatInputModule,
-    MatDialogModule,
-    MatPaginatorModule,
-    MatDatepickerModule,
-    MatGridListModule,
-    MatSlideToggleModule,
-    MatTreeModule,
-    MatNativeDateModule,
-    MatAutocompleteModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatButtonToggleModule,
-    RouterModule
-  ],
-  exports: [
+    MatInputModule],
+    RouterModule.forChild([
+      {
+        path: '',
+        component: JsOpenApiMainComponent,
+      }
+    ])
   ]
 })
 export class AngularJsOpenApiModule { }

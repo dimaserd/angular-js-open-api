@@ -6,17 +6,11 @@ import { JsOpenApiServiceDocumentation } from '../../models/JsOpenApiServiceDocu
   templateUrl: './js-worker-expansion-panel.component.html',
   styleUrls: ['./js-worker-expansion-panel.component.css']
 })
-export class JsWorkerExpansionPanelComponent implements OnInit {
-
+export class JsWorkerExpansionPanelComponent {
   @Input() worker: JsOpenApiServiceDocumentation;
   @Input() remoteName: string;
   @Output() onGetScript = new EventEmitter<string>();
-  
   panelOpenState = false;
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   onGetScriptHandler(script: string){
     this.onGetScript.emit(script);
