@@ -9,6 +9,8 @@ Run `ng generate component component-name --project angular-js-open-api` to gene
 
 ## Build
 
+npm install --save-dev @angular-devkit/build-angular
+
 Run `ng build angular-js-open-api` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Publishing

@@ -9,6 +9,9 @@
     </mat-expansion-panel-header>
     <table mat-table [dataSource]="varaibles" class="mat-elevation-z8" style="width: 100%;">
 
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+    
       <!-- Position Column -->
       <ng-container matColumnDef="typeFullName">
         <th mat-header-cell *matHeaderCellDef> TypeFullName </th>

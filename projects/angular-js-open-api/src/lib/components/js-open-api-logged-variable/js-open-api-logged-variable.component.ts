@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ClipboardService } from 'ngx-clipboard';
-import { JsLogggedVariables } from '../../models';
+import { JsLogggedVariables } from '../../models/JsLogggedVariables';
 
 @Component({
   selector: 'croco-js-open-api-logged-variable',
@@ -10,15 +10,13 @@ import { JsLogggedVariables } from '../../models';
 })
 export class JsOpenApiLoggedVariableComponent implements OnInit {
   panelOpenState = false;
-  
-  @Input() 
-  log: JsLogggedVariables;
+  @Input() log: JsLogggedVariables;
 
   varaibles: JsSerializedVariableViewModel[];
   displayedColumns: string[] = ['typeFullName', 'dataJson'];
 
-  constructor(private _clipboardService: ClipboardService, 
-    private _snackBar: MatSnackBar) {  
+  constructor(private _clipboardService: ClipboardService, private _snackBar: MatSnackBar) { 
+    
   }
 
   ngOnInit() {
